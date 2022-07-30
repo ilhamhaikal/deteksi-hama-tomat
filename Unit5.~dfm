@@ -1,0 +1,118 @@
+object Gejala: TGejala
+  Left = 0
+  Top = 0
+  Width = 586
+  Height = 433
+  TabOrder = 0
+  object lbl1: TLabel
+    Left = 144
+    Top = 296
+    Width = 73
+    Height = 13
+    Caption = 'KODE GEJALA'
+  end
+  object lbl2: TLabel
+    Left = 144
+    Top = 328
+    Width = 74
+    Height = 13
+    Caption = 'NAMA GEJALA'
+  end
+  object smdbgrdgejala: TSMDBGrid
+    Left = 88
+    Top = 136
+    Width = 409
+    Height = 129
+    DataSource = DM.Gejala_ds
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+    Flat = False
+    BandsFont.Charset = DEFAULT_CHARSET
+    BandsFont.Color = clWindowText
+    BandsFont.Height = -11
+    BandsFont.Name = 'MS Sans Serif'
+    BandsFont.Style = []
+    Groupings = <>
+    GridStyle.Style = gsCustom
+    GridStyle.OddColor = clWindow
+    GridStyle.EvenColor = clWindow
+    TitleHeight.PixelCount = 24
+    FooterColor = clBtnFace
+    ExOptions = [eoENTERlikeTAB, eoKeepSelection, eoStandardPopup, eoBLOBEditor, eoTitleWordWrap, eoFilterAutoApply]
+    RegistryKey = 'Software\Scalabium'
+    RegistrySection = 'SMDBGrid'
+    WidthOfIndicator = 11
+    DefaultRowHeight = 17
+    ScrollBars = ssHorizontal
+    Columns = <
+      item
+        Alignment = taCenter
+        Expanded = False
+        FieldName = 'KodeGejala'
+        Title.Alignment = taCenter
+        Title.Caption = 'Kode'
+        Visible = True
+      end
+      item
+        Alignment = taCenter
+        Expanded = False
+        FieldName = 'NamaGejala'
+        Title.Alignment = taCenter
+        Title.Caption = 'Nama Gejala'
+        Visible = True
+      end>
+  end
+  object smdbnvgtr1: TSMDBNavigator
+    Left = 176
+    Top = 40
+    Width = 240
+    Height = 25
+    DataSource = DM.Hama_ds
+    Layout = blGlyphLeft
+    ShowCaption = False
+    ShowGlyph = True
+    TabOrder = 1
+    Visible = False
+  end
+  object dbedtKodeGejala: TDBEdit
+    Left = 264
+    Top = 296
+    Width = 121
+    Height = 21
+    DataField = 'KodeGejala'
+    DataSource = DM.Gejala_ds
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 2
+  end
+  object dbedtNamaGejala: TDBEdit
+    Left = 264
+    Top = 328
+    Width = 193
+    Height = 21
+    DataField = 'NamaGejala'
+    DataSource = DM.Gejala_ds
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = []
+    ParentFont = False
+    TabOrder = 3
+  end
+end
